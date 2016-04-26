@@ -1,0 +1,23 @@
+<html ng-app="app">
+  <head>
+    <script src="angular-1.5.5/angular.js"></script>
+    <script src="script.js"></script>
+  </head>
+
+  <body ng-controller="MainCtrl">
+    <p>
+      Selecciona un usuario:
+      <select 
+          ng-model="usuarioSeleccionado" 
+          ng-options="usuario as usuario.nombre for usuario in usuarios" 
+       >
+        <option value="">-- Selecciona un usuario --</option>
+      </select>
+    </p>
+    <p>
+      El usuario seleccionado es: 
+      {{usuarioSeleccionado.nombre}} {{usuarioSeleccionado.ape1}}
+    </p>
+  </body>
+
+</html>
